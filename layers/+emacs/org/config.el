@@ -14,7 +14,7 @@
 (defvar org-enable-bootstrap-support nil
   "If non-nil Twitter Bootstrap related packages are configured.")
 
-(defvar org-enable-github-support nil
+(defvar org-enable-github-support t
   "If non-nil Github related packages are configured.")
 
 (defvar org-enable-reveal-js-support nil
@@ -26,4 +26,11 @@ path, one file per project is used (and the path is relative to
 the project root). If it an absolute path, one global file is
 used.")
 
+;; http://spacemacs.org/layers/+emacs/org/README.html
+;; The TODO files are not added to the agenda automatically. 
+;;(with-eval-after-load 'org-agenda
+;;  (require 'org-projectile)
+;;  (push (org-projectile:todo-files) org-agenda-files))
+
+;; (set-face-bold-p 'bold t)
 (spacemacs|defvar-company-backends org-mode)
